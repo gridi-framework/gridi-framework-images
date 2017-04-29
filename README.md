@@ -1,7 +1,7 @@
 # Gridi Framework Images
 
 ## Install
-`brew install gridi-framework-images`
+`bower install gridi-framework-images`
 
 ## Licence
 

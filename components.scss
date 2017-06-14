@@ -3,7 +3,7 @@ img {
     width: auto;
     height: auto;
     max-width: 100%;
-    margin: $img-margin;
+    @include include-element-margin($img-margin-top, $img-margin-bottom, $img-margin-left, $img-margin-right, $img-margin-for-screens);
     border: 0;
     padding: 0;
     vertical-align: middle;
@@ -19,11 +19,11 @@ figure {
 }
 
 figcaption {
-    margin: $figure-caption-margin;
+    @include include-element-margin($figure-caption-margin-top, $figure-caption-margin-bottom, $figure-caption-margin-left, $figure-caption-margin-right, $figure-caption-margin-for-screens);
 }
 
 figure {
-    margin: $figure-margin;
+    @include include-element-margin($figure-margin-top, $figure-margin-bottom, $figure-margin-left, $figure-margin-right, $figure-margin-for-screens);
 
     img {
         margin-top: 0;

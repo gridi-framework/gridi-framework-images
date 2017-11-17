@@ -1,43 +1,116 @@
 img {
-    display: inline-block;
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    @include include-element-margin($img-margin-top, $img-margin-bottom, $img-margin-left, $img-margin-right, $img-margin-for-screens);
-    border: 0;
-    padding: 0;
-    vertical-align: middle;
-    -ms-interpolation-mode: bicubic;
+    display: $img-display;
+    width: $img-width;
+    height: $img-height;
+    max-width: $img-max-width;
+    @include margin-shorthand-with-screens-support((
+        top: $img-margin-top,
+        bottom: $img-margin-bottom,
+        left: $img-margin-left,
+        right: $img-margin-right
+    ), $img-margin-for-screens);
+    @include border-shorthand((
+        border: (
+            width: $img-border-width,
+            style: $img-border-style,
+            color: $img-border-color,
+            make-shorthand: true
+        ),
+        border-top: (
+            width: $img-border-top-width,
+            style: $img-border-top-style,
+            color: $img-border-top-color,
+            make-shorthand: $img-border-top-make-shorthand
+        ),
+        border-bottom: (
+            width: $img-border-bottom-width,
+            style: $img-border-bottom-style,
+            color: $img-border-bottom-color,
+            make-shorthand: $img-border-bottom-make-shorthand
+        ),
+        border-left: (
+            width: $img-border-left-width,
+            style: $img-border-left-style,
+            color: $img-border-left-color,
+            make-shorthand: $img-border-left-make-shorthand
+        ),
+        border-right: (
+            width: $img-border-right-width,
+            style: $img-border-right-style,
+            color: $img-border-right-color,
+            make-shorthand: $img-border-right-make-shorthand
+        )
+    ));
+    @include padding-shorthand((
+        top: $img-padding-top,
+        bottom: $img-padding-bottom,
+        left: $img-padding-left,
+        right: $img-padding-right
+    ));
+    vertical-align: $img-vertical-align;
+    -ms-interpolation-mode: $img-ms-interpolation-mode;
+    @include img-extra-style();
 }
 
 figcaption,
 figure {
-    display: block;
+    @if $figure-display == $figure-caption-display {
+        display: $figure-display;
+    }
     margin: 0;
     border: 0;
     padding: 0;
 }
 
 figcaption {
-    @include include-element-margin($figure-caption-margin-top, $figure-caption-margin-bottom, $figure-caption-margin-left, $figure-caption-margin-right, $figure-caption-margin-for-screens);
+    @if $figure-display != $figure-caption-display {
+        display: $figure-caption-display;
+    }
+    @include margin-shorthand-with-screens-support((
+        top: $figure-caption-margin-top,
+        bottom: $figure-caption-margin-bottom,
+        left: $figure-caption-margin-left,
+        right: $figure-caption-margin-right
+    ), $figure-caption-margin-for-screens);
+    @include figure-caption-extra-style();
 }
 
 figure {
-    @include include-element-margin($figure-margin-top, $figure-margin-bottom, $figure-margin-left, $figure-margin-right, $figure-margin-for-screens);
+    @if $figure-display != $figure-caption-display {
+        display: $figure-display;
+    }
+    @include margin-shorthand-with-screens-support((
+        top: $figure-margin-top,
+        bottom: $figure-margin-bottom,
+        left: $figure-margin-left,
+        right: $figure-margin-right
+    ), $figure-margin-for-screens);
+    @include figure-extra-style();
 
     img {
-        margin-top: 0;
-        margin-bottom: 0;
+        @include margin-shorthand((
+            top: $figure-img-margin-top,
+            bottom: $figure-img-margin-bottom,
+            left: $figure-img-margin-left,
+            right: $figure-img-margin-right
+        ));
+        @include figure-img-extra-style();
     }
 
     figcaption {
-        margin-bottom: 0;
+        @include margin-shorthand((
+            top: $figure-figure-caption-margin-top,
+            bottom: $figure-figure-caption-margin-bottom,
+            left: $figure-figure-caption-margin-left,
+            right: $figure-figure-caption-margin-right
+        ));
+        @include figure-figure-caption-extra-style();
     }
 }
 
 canvas {
-    display: inline-block;
-    vertical-align: baseline;
+    display: $canvas-display;
+    vertical-align: $canvas-vertical-align;
 }
 
 svg:not(:root) {

@@ -1,50 +1,86 @@
 //Img
+$img-display: inline-block !default;
+$img-width: auto !default;
+$img-height: auto !default;
+$img-max-width: 100% !default;
+
+//Margins
 $img-margin-top: $elements-margin-top !default;
 $img-margin-bottom: $elements-margin-bottom !default;
 $img-margin-left: $elements-margin-left !default;
 $img-margin-right: $elements-margin-right !default;
-//Defined margins for each screens.
-$img-margin-for-screens: () !default;
-/*$img-margin-for-screens: (
-    s1: (
-        top: 20px, //Not required. Define only the margins values you want to change. Example - s2: ( top: 20px ) - change only top margin for screens greater than s2
-        bottom: 20px,
-        left: 20px,
-        right: 20px,
-    ),
-    ...
-) !default;*/
+$img-margin-for-screens: $elements-margin-for-screens !default;
+
+//Borders
+$img-border-width: 0 !default;
+$img-border-style: null !default;
+$img-border-color: null !default;
+
+$img-border-top-width: null !default;
+$img-border-top-style: null !default;
+$img-border-top-color: null !default;
+$img-border-top-make-shorthand: false !default;
+
+$img-border-bottom-width: null !default;
+$img-border-bottom-style: null !default;
+$img-border-bottom-color: null !default;
+$img-border-bottom-make-shorthand: false !default;
+
+$img-border-left-width: null !default;
+$img-border-left-style: null !default;
+$img-border-left-color: null !default;
+$img-border-left-make-shorthand: false !default;
+
+$img-border-right-width: null !default;
+$img-border-right-style: null !default;
+$img-border-right-color: null !default;
+$img-border-right-make-shorthand: false !default;
+
+//Paddings
+$img-padding-top: 0 !default;
+$img-padding-bottom: 0 !default;
+$img-padding-left: 0 !default;
+$img-padding-right: 0 !default;
+
+//Align
+$img-vertical-align: middle !default;
+$img-ms-interpolation-mode: bicubic !default;
+
+//Extra style
+@mixin img-extra-style() {}
 
 //Figure
+$figure-display: block !default;
 $figure-margin-top: $elements-margin-top !default;
 $figure-margin-bottom: $elements-margin-bottom !default;
 $figure-margin-left: $elements-margin-left !default;
 $figure-margin-right: $elements-margin-right !default;
-//Defined margins for each screens.
-$figure-margin-for-screens: () !default;
-/*$figure-margin-for-screens: (
-    s1: (
-        top: 20px, //Not required. Define only the margins values you want to change. Example - s2: ( top: 20px ) - change only top margin for screens greater than s2
-        bottom: 20px,
-        left: 20px,
-        right: 20px,
-    ),
-    ...
-) !default;*/
+$figure-margin-for-screens: $elements-margin-for-screens !default;
+@mixin figure-extra-style() {}
 
 //Figure caption
+$figure-caption-display: block !default;
 $figure-caption-margin-top: $elements-margin-top !default;
 $figure-caption-margin-bottom: $elements-margin-bottom !default;
 $figure-caption-margin-left: $elements-margin-left !default;
 $figure-caption-margin-right: $elements-margin-right !default;
-//Defined margins for each screens.
-$figure-caption-margin-for-screens: () !default;
-/*$figure-caption-margin-for-screens: (
-    s1: (
-        top: 20px, //Not required. Define only the margins values you want to change. Example - s2: ( top: 20px ) - change only top margin for screens greater than s2
-        bottom: 20px,
-        left: 20px,
-        right: 20px,
-    ),
-    ...
-) !default;*/
+$figure-caption-margin-for-screens: $elements-margin-for-screens !default;
+@mixin figure-caption-extra-style() {}
+
+//Figure Img
+$figure-img-margin-top: 0 !default;
+$figure-img-margin-bottom: 0 !default;
+$figure-img-margin-left: null !default;
+$figure-img-margin-right: null !default;
+@mixin figure-img-extra-style() {}
+
+//Figure Figure caption
+$figure-figure-caption-margin-top: null !default;
+$figure-figure-caption-margin-bottom: 0 !default;
+$figure-figure-caption-margin-left: null !default;
+$figure-figure-caption-margin-right: null !default;
+@mixin figure-figure-caption-extra-style() {}
+
+//Canvas
+$canvas-display: inline-block !default;
+$canvas-vertical-align: baseline !default;

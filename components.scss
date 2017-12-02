@@ -9,38 +9,14 @@ img {
         left: $img-margin-left,
         right: $img-margin-right
     ), $img-margin-for-screens);
-    @include border-shorthand((
+    @include border-shorthand(map-merge((
         border: (
             width: $img-border-width,
             style: $img-border-style,
             color: $img-border-color,
             make-shorthand: true
-        ),
-        border-top: (
-            width: $img-border-top-width,
-            style: $img-border-top-style,
-            color: $img-border-top-color,
-            make-shorthand: $img-border-top-make-shorthand
-        ),
-        border-bottom: (
-            width: $img-border-bottom-width,
-            style: $img-border-bottom-style,
-            color: $img-border-bottom-color,
-            make-shorthand: $img-border-bottom-make-shorthand
-        ),
-        border-left: (
-            width: $img-border-left-width,
-            style: $img-border-left-style,
-            color: $img-border-left-color,
-            make-shorthand: $img-border-left-make-shorthand
-        ),
-        border-right: (
-            width: $img-border-right-width,
-            style: $img-border-right-style,
-            color: $img-border-right-color,
-            make-shorthand: $img-border-right-make-shorthand
         )
-    ));
+    ), $img-borders));
     @include padding-shorthand((
         top: $img-padding-top,
         bottom: $img-padding-bottom,

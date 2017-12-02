@@ -15,26 +15,7 @@ $img-margin-for-screens: $elements-margin-for-screens !default;
 $img-border-width: 0 !default;
 $img-border-style: null !default;
 $img-border-color: null !default;
-
-$img-border-top-width: null !default;
-$img-border-top-style: null !default;
-$img-border-top-color: null !default;
-$img-border-top-make-shorthand: false !default;
-
-$img-border-bottom-width: null !default;
-$img-border-bottom-style: null !default;
-$img-border-bottom-color: null !default;
-$img-border-bottom-make-shorthand: false !default;
-
-$img-border-left-width: null !default;
-$img-border-left-style: null !default;
-$img-border-left-color: null !default;
-$img-border-left-make-shorthand: false !default;
-
-$img-border-right-width: null !default;
-$img-border-right-style: null !default;
-$img-border-right-color: null !default;
-$img-border-right-make-shorthand: false !default;
+$img-borders: () !default;
 
 //Paddings
 $img-padding-top: 0 !default;

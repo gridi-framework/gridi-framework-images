@@ -28,7 +28,7 @@ $img-vertical-align: middle !default;
 $img-ms-interpolation-mode: bicubic !default;
 
 //Extra style
-@mixin img-extra-style() {}
+//@mixin img-extra-style() {} //Create this mixin before import module when you want add some special style for element
 
 //Figure
 $figure-display: block !default;
@@ -37,7 +37,7 @@ $figure-margin-bottom: $elements-margin-bottom !default;
 $figure-margin-left: $elements-margin-left !default;
 $figure-margin-right: $elements-margin-right !default;
 $figure-margin-for-screens: $elements-margin-for-screens !default;
-@mixin figure-extra-style() {}
+//@mixin figure-extra-style() {} //Create this mixin before import module when you want add some special style for element
 
 //Figure caption
 $figure-caption-display: block !default;
@@ -46,21 +46,21 @@ $figure-caption-margin-bottom: $elements-margin-bottom !default;
 $figure-caption-margin-left: $elements-margin-left !default;
 $figure-caption-margin-right: $elements-margin-right !default;
 $figure-caption-margin-for-screens: $elements-margin-for-screens !default;
-@mixin figure-caption-extra-style() {}
+//@mixin figure-caption-extra-style() {} //Create this mixin before import module when you want add some special style for element
 
 //Figure Img
 $figure-img-margin-top: 0 !default;
 $figure-img-margin-bottom: 0 !default;
 $figure-img-margin-left: null !default;
 $figure-img-margin-right: null !default;
-@mixin figure-img-extra-style() {}
+//@mixin figure-img-extra-style() {} //Create this mixin before import module when you want add some special style for element
 
 //Figure Figure caption
 $figure-figure-caption-margin-top: null !default;
 $figure-figure-caption-margin-bottom: 0 !default;
 $figure-figure-caption-margin-left: null !default;
 $figure-figure-caption-margin-right: null !default;
-@mixin figure-figure-caption-extra-style() {}
+//@mixin figure-figure-caption-extra-style() {} //Create this mixin before import module when you want add some special style for element
 
 //Canvas
 $canvas-display: inline-block !default;

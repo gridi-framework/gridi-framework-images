@@ -25,7 +25,9 @@ img {
     ));
     vertical-align: $img-vertical-align;
     -ms-interpolation-mode: $img-ms-interpolation-mode;
-    @include img-extra-style();
+    @if mixin-exists(img-extra-style) {
+        @include img-extra-style();
+    }
 }
 
 figcaption,
@@ -48,7 +50,9 @@ figcaption {
         left: $figure-caption-margin-left,
         right: $figure-caption-margin-right
     ), $figure-caption-margin-for-screens);
-    @include figure-caption-extra-style();
+    @if mixin-exists(figure-caption-extra-style) {
+        @include figure-caption-extra-style();
+    }
 }
 
 figure {
@@ -61,7 +65,9 @@ figure {
         left: $figure-margin-left,
         right: $figure-margin-right
     ), $figure-margin-for-screens);
-    @include figure-extra-style();
+    @if mixin-exists(figure-extra-style) {
+        @include figure-extra-style();
+    }
 
     img {
         @include margin-shorthand((
@@ -70,7 +76,9 @@ figure {
             left: $figure-img-margin-left,
             right: $figure-img-margin-right
         ));
-        @include figure-img-extra-style();
+        @if mixin-exists(figure-img-extra-style) {
+            @include figure-img-extra-style();
+        }
     }
 
     figcaption {
@@ -80,7 +88,9 @@ figure {
             left: $figure-figure-caption-margin-left,
             right: $figure-figure-caption-margin-right
         ));
-        @include figure-figure-caption-extra-style();
+        @if mixin-exists(figure-figure-caption-extra-style) {
+            @include figure-figure-caption-extra-style();
+        }
     }
 }
 
